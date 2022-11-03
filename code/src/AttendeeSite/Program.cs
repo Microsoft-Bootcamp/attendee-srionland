@@ -7,7 +7,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-//Technical Bootcamp Hands on lab
+// Technical Bootcamp Hands on lab
+// GitHub Actions trigger
 namespace AttendeeSite
 {
     public class Program
