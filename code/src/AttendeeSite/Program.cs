@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
+//Technical Bootcamp Hands on lab
 namespace AttendeeSite
 {
     public class Program
