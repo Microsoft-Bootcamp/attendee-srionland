@@ -1,0 +1,24 @@
+name: BootcampExercises/pipelines/valet-mapper-example
+on:
+  push:
+    branches:
+    - "*"
+env:
+  BUILDCONFIGURATION: Release
+  BuildParameters_RESTOREBUILDPROJECTS: "**/*.csproj"
+jobs:
+  Job_1:
+    name: Agent job 1
+    runs-on: windows-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
+    - name: Use Node 10.16.3
+      uses: actions/setup-node@v2
+      with:
+        node-version: 10.16.3
+    - name: Restore
+      run: dotnet restore ${{ env.BuildParameters_RESTOREBUILDPROJECTS }}
+    - name: Build
+      run: dotnet build ${{ env.BuildParameters_RESTOREBUILDPROJECTS }} --configuration ${{ env.BUILDCONFIGURATION }}
