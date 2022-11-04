@@ -22,5 +22,6 @@
           "ms-azuretools.vscode-docker",
           "ms-vscode.powershell",
           "GitHub.copilot"
-      ]
+      ],
+	"postCreateCommand": "docker pull ghcr.io/valet-customers/valet-cli:latest && chmod +x ./valet/valet-update && chmod +x ./valet/valet && gh extension install github/gh-valet || echo 'Could not auto-build. Skipping.' "
   }
